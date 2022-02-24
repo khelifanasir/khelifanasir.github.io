@@ -1,3 +1,5 @@
+"use strict";
+
 let salesman = prompt (" say 'salaried' if sales man is salaried or not 'salaried'  not")
  let sales = prompt (" enter sales amount") 
      sales = Number ( sales)
