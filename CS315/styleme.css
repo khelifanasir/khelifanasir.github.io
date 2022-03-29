@@ -1,0 +1,21 @@
+h1,h2 {
+    color: brown;
+}
+.font{
+    font-family: Arial, Helvetica, sans-serif;
+    size: 0em;
+    font-weight: 200;
+    font-style: italic;
+}
+div{
+    background-color: cadetblue;
+    border: chocolate;
+    border-style: dotted;
+}
+.image {
+    width: 250px;
+    height: 250px;
+}
+a{
+    color: red;
+}
