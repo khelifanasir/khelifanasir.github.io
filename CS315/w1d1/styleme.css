@@ -31,3 +31,6 @@ span {
 body{
     background-color: gainsboro;
 }
+a[target=_blank]:hover{
+    text-decoration: underline;
+}
