@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p> Input </p>
+    <p><input id="input" name="Input" type="text" value="" ></p>
+    <p> Output </p>
+    <p><textarea id="output" rows="4" cols="20" value=""> </textarea></p>
+    <p><input type="button" value="click to add" onclick="change()"></p>
+    </div> 
+
+
+<script>
+    function another (){
+    const para = document.querySelectorAll("input[type='text']")
+    const output = document.getElementById("output")
+    const input = document.getElementById("input")
+    output.value = ""
+    return function addme(){
+    for (const element of para){
+        output.value = element.value
+        para[0].value = ""
+        
+    }
+    
+}
+    }
+   let change = another()
+</script>
+<a href="https://validator.w3.org/check/referer">Validate</a><br>
+</body>
+</html>

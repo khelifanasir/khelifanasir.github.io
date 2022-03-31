@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> First Value</p>
+<p><input type="text" value="" id="first"></p>
+<p> Second Value</p>
+<p><input type="text" value="" id="second"></p>
+<p>Operations:</p>
+<p>
+    <button  onclick="add()" id="add">+</button>
+    <button  onclick="substract()" id="sub">-</button>
+    <button onclick="multiplication()" id="mul">*</button>
+</p>
+<p> Result</p>
+<label id = "label"></label>
+
+
+<script>
+    function add(){
+        let x = document.querySelectorAll("input[type='text']")
+        let sum = 0
+        for (let each of x){
+            sum += Number(each.value)
+        }
+        
+        
+        let lebel = document.getElementById("label")
+        
+        lebel.innerText = sum
+    }
+    function substract(){
+        let x = document.querySelectorAll("input[type='text']")
+        let total = x[0].value * 2
+        for (let each of x){
+            total -= Number(each.value)
+        }
+        
+        
+        let lebel = document.getElementById("label")
+        
+        lebel.innerText = total
+
+    }
+    function multiplication(){
+        let x = document.querySelectorAll("input[type='text']")
+        let mul = 1
+        for (let each of x){
+            mul *= Number(each.value)
+        }
+        
+        
+        let lebel = document.getElementById("label")
+        
+        lebel.innerText = mul
+    }
+</script>
+<a href="https://validator.w3.org/check/referer">Validate</a><br>
+</body>
+</html>
