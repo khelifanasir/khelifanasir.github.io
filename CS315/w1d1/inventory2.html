@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr th{
+            background-color: rgb(92, 90, 205);
+            color: snow;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        body > button{
+            background-color: green;
+            color: white;
+            text-align:center;
+            margin-left: 250px;
+            
+        }
+       
+        .price {
+            background-color: darkcyan;
+        }
+        .bun{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+        <p>Input Name</p>
+        <p>
+          <input type="text" id="name" value="" />
+        </p>
+        <p>Item Category</p>
+        <p>
+          <input type="text" id="category" value="" />
+        </p>
+        <p>Quantity</p>
+        <p>
+          <input type="text" id="quantity" value="" > 
+        </p>
+        <p> Price</p>
+        <p>
+            <input onclick="alertCustomer()" type="text" id="price" value="" class="price" input> 
+          </p>
+        <p> Rating</p>
+        <p> <input type="text" id="rating" value=""></p>
+        <button  onclick="add();">Add </button><br>
+        <br>
+        
+
+
+
+        <div id="select">
+    
+           <select id="sale" name="Filter">
+    
+           <option value="quantity" onclick="filter()">Filter</option>
+    
+           <option value="items" onclick="find()">Items</option>
+    
+           </select>
+           
+        <table border="" id="table">
+          <tr id="symbol">
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th> Price</th>
+            <th> Rating</th>
+            <th></th>
+            <th></th>
+            
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+           
+           
+          </tr>
+        </table>
+
+        </div>
+        <script>
+          function add() {
+            let itemPrice  = document.getElementById("price")
+            let result = Number(itemPrice.value);
+            if(isNaN(result)){
+                itemPrice.className="bun"
+                return;
+
+            }
+             else{
+             
+            
+            let itemName = document.getElementById("name").value;
+            let itemCategory = document.getElementById("category").value;
+            let itemQuantity = document.getElementById("quantity").value;
+            
+            let itemRating = document.getElementById("rating").value
+            let table = document.getElementsByTagName('table')[0];
+            let edit = document.createElement("button")
+            let removed = document.createElement("button")
+           edit.onclick = "Remove()"
+            edit.innerHTML = "edit"
+            removed.onclick = "Edit()"
+            removed.innerHTML = "remove"
+            
+            
+
+            let newRow = table.insertRow(table.rows.length);
+    
+            let cel1 = newRow.insertCell(0);
+            let cel2 = newRow.insertCell(1);
+            let cel3 = newRow.insertCell(2);
+            let cel4 = newRow.insertCell(3);
+            let cel5 = newRow.insertCell(4)
+            let cel6 = newRow.insertCell(5)
+            let cel7 = newRow.insertCell(6)
+
+            cel1.innerHTML = itemName;
+            cel2.innerHTML = itemCategory;
+            cel3.innerHTML = itemQuantity;
+            cel4.innerHTML = itemPrice.value;
+            cel5.innerHTML = itemRating;
+            cel6.appendChild(edit)
+            cel7.appendChild(removed)
+             
+             }  
+        }
+          
+        
+        document.getElementById("table").onmouseover = function() {mouseOver()};
+        document.getElementById("table").onmouseout = function (){onMouse()}
+
+        function mouseOver (){
+          const table = document.getElementById("table").style.backgroundColor = "red";
+          
+          }
+          function onMouse (){
+          const table = document.getElementById("table").style.backgroundColor = "yellow";
+          
+          }
+      
+          function Remove(rowDel, obj) {
+    table.deleteRow(rowDel.rowIndex);
+
+    for (let i = 0; i < arrayy.length; i++) {
+      if (arrayy[i] === obj) {
+        arrayy.splice(i, 1);
+      }
+    }
+  }
+function edit(){
+    
+}
+          
+    
+        </script>
+    
+    <a href="https://validator.w3.org/check/referer">Validate</a><br>
+</body>
+</html>
