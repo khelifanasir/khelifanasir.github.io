@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+    .container{
+         
+         display:flex;
+                justify-content: space-around;
+                width:100%;
+                height:100%;
+                gap:20px;
+                background-image: url("../CS315/images/image-12.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position:100%;
+                padding:50px;
+    }
+    .box{      
+     width:20%;
+    flex:1 1 auto;
+    background-color: cyan;
+               
+    }
+    .buttonContainer{
+        display: flex;
+                gap:20px;
+                align-items: center;
+                padding-left: 60px;
+    }
+    .blush{
+        flex:1 1 auto;
+        width:30%;
+        padding-left: 250px;
+        padding-right: 320px;
+        flex:2 1 auto;
+        gap: 10px;
+                
+    }
+    .input{
+        flex:1 1 auto;
+                width:20%;
+                padding-left: 30px;
+                padding-right: 30px;
+                
+                
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>First article</h2>
+            <p>Tiger Woods returned to Las Vegas
+            this past weekend to host Tiger Jam
+            at MGM Grand Hotel & Casino.
+            Among the highlights of the weekend for participants
+             in attendance at the 21st annual charity event,
+              was a chance to experience Janet Jackson’s 
+              critically acclaimed Las Vegas Residency,
+               “Metamorphosis.” The two-day charity event 
+               held Friday, May 24 and Saturday, May 25 
+               brought a jam-packed weekend of activities
+                to Las Vegas to raise funds for TGR Foundation.</p>
+        </div>
+        <div class="box">
+            <h2>Second article</h2>
+            <p>“Tiger Jam was a tremendous success 
+                this year,” said Tiger Woods. “I am 
+                grateful to Janet Jackson, our guests 
+                who attended, along with all the sponsors
+                 and donors who support the event every
+                  year. This support helps us reach our 
+                  goal at TGR Foundation to reach millions
+                   of kids through education.”</p>
+        </div>
+        <div class="box">
+            <div style="gap: 10px;">
+            <div class="buttonContainer" style="justify-content: space-around; flex: wrap; display: flex; gap: 10px;">
+              <input class="input" type="button" value="Smile">
+             <input class="input" type="button" value="Laugh">
+                <input class="input" type="button" value="Wink">
+               <input class="input" type="button" value="Shrug">
+            </div>
+            <div>
+                <div class="blush"><input type="button" value="Blush"></div>
+            </div>
+            
+            <div>
+                <p>The list of festivities throughout 
+                    the weekend was vintage Tiger Jam, 
+                    including two days of golf, a charity 
+                    poker tournament, VIP reception, live 
+                    and silent auctions, concert and post-party.
+                     However, the 2019 edition featured a mix of 
+                     special surprises and new venues that kept 
+                     the guests entertained all weekend long</p>
+                <p>Woods teed off the weekend Friday morning at
+                     the exclusive Shadow Creek Golf Course with
+                      a private golf exhibition and Q&A session 
+                      for Tiger Jam guests. The 2019 Masters champion 
+                      wowed guests on the range, showcasing his practice
+                       routine while driving dozens of balls into the
+                        Vegas sun. He also opened up to the crowd with 
+                        unique insights during the exhibition, answering
+                         guest questions about his Masters win, swing 
+                         tips and golfing as a child with his father.</p>     
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>
