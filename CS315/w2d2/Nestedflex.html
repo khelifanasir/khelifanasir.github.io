@@ -25,6 +25,13 @@
     background-color: cyan;
                
     }
+    .blushcontainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px;
+    }
     .buttonContainer{
         display: flex;
                 gap:20px;
@@ -32,12 +39,8 @@
                 padding-left: 60px;
     }
     .blush{
-        flex:1 1 auto;
-        width:30%;
-        padding-left: 250px;
-        padding-right: 320px;
-        flex:2 1 auto;
-        gap: 10px;
+        display: flex;
+        flex-basis: 200px;
                 
     }
     .input{
@@ -79,14 +82,14 @@
         </div>
         <div class="box">
             <div style="gap: 10px;">
-            <div class="buttonContainer" style="justify-content: space-around; flex: wrap; display: flex; gap: 10px;">
-              <input class="input" type="button" value="Smile">
+            <div class="buttonContainer" style="justify-content: space-around; flex: wrap; display: flex; gap: 10px; margin: 10px;">
+            <input class="input" type="button" value="Smile">
              <input class="input" type="button" value="Laugh">
                 <input class="input" type="button" value="Wink">
                <input class="input" type="button" value="Shrug">
             </div>
-            <div>
-                <div class="blush"><input type="button" value="Blush"></div>
+            <div class="blushcontainer">
+                <div class="blush"><input style="width: 300px;" type="button" value="Blush"></div>
             </div>
             
             <div>
