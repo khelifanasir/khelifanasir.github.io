@@ -60,9 +60,9 @@
     
            <select id="sale" name="Filter">
     
-           <option value="quantity" onclick="filter()">Filter</option>
+           <option value="quantity > 100" onclick="filter()">Filter</option>
     
-           <option value="items" onclick="find()">Items</option>
+           <option value="Rating > 4" onclick="find()">Items</option>
     
            </select>
            
@@ -105,11 +105,11 @@
             
             let itemRating = document.getElementById("rating").value
             let table = document.getElementsByTagName('table')[0];
-            let edit = document.createElement("button")
+            // let edit = document.createElement("button")
             let removed = document.createElement("button")
            edit.onclick = "Remove()"
-            edit.innerHTML = "edit"
-            removed.onclick = "Edit()"
+            // edit.innerHTML = "edit"
+            // removed.onclick = "Edit()"
             removed.innerHTML = "remove"
             
             
@@ -157,9 +157,9 @@
       }
     }
   }
-function edit(){
+// function edit(){
     
-}
+// }
           
     
         </script>
