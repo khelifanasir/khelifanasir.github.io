@@ -8,6 +8,7 @@
     <style>
     .container{        
          display:flex;
+         flex-direction: row;
          justify-content: space-around;
          height:100%;
          gap:20px;
@@ -28,9 +29,9 @@
     }
     .buttonContainer{
         display: flex;
-                gap:20px;
-                align-items: center;
-                padding-left: 60px;
+        gap:20px;
+        align-items: center;
+        padding-left: 60px;
     }
     .blush{
         display: flex;
@@ -39,11 +40,9 @@
     }
     .input{
         flex:1 1 auto;
-                width:20%;
-                padding-left: 30px;
-                padding-right: 30px;
-                
-                
+        width:20%;
+       padding-left: 30px;
+       padding-right: 30px;             
     }
     </style>
 </head>
@@ -75,7 +74,7 @@
                    of kids through education.”</p>
         </div>
         <div class="box">
-            <div style="gap: 10px;">
+            <!-- <div style="gap: 10px;"> -->
             <div class="buttonContainer" style="justify-content: space-around; flex: wrap; display: flex; gap: 10px; margin: 10px;">
             <input class="input" type="button" value="Smile">
              <input class="input" type="button" value="Laugh">

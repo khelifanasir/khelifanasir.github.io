@@ -5,23 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-around;
+
+    }    
+    </style>
    
 </head>
 <body>
-    <label>Name : Soo</label>
-    <button onclick="edit()">Edit</button>
+    <div class="container">
+        <label>Email</label>
+        <label>Password</label>
+        <label>Confirm Password</label>
+        <label>Name</label>
+        <label>Gender</label>
+        <label>Country</label>
+        <label>Terms and Conditions</label>
+        <label>Newsletter</label>
+        <div>
+            <button onclick="edit()">Edit</button>
+            <button onclick="save()">Save</button>
+        </div>
+
+    </div>
+       
     <script>
+         
         const urlParams = new URLSearchParams(window.location.search);
-        const myParam = urlParams.get('fname');
-        console.log(urlParams.get('fname'));
-        let label = document.getElementsByTagName("label")[0];
-        label.innerHTML= urlParams.get('fname')+" "+ urlParams.get("lname")
-        +" "+urlParams.get('select');
+        
+        let label1 = document.getElementsByTagName("label")[0];
+        label1.innerHTML= label1.innerHTML +":  " + urlParams.get('email');
+
+        let label2 = document.getElementsByTagName("label")[1];
+        label2.innerHTML= label2.innerHTML +":  " + urlParams.get('password');
+
+        let label3 = document.getElementsByTagName("label")[2];
+        label3.innerHTML= label3.innerHTML +":  " + urlParams.get('confirmPassword');
+
+        let label4 = document.getElementsByTagName("label")[3];
+        label4.innerHTML= label4.innerHTML + ": " +urlParams.get('fname')+" "+ urlParams.get("lname");
+
+        let label5 = document.getElementsByTagName("label")[4];
+        label5.innerHTML= label5.innerHTML +":  " + urlParams.get('gender');
+
+        let label6 = document.getElementsByTagName("label")[5];
+        label6.innerHTML= label6.innerHTML +":  " + urlParams.get('selection');
+
+        let label7 = document.getElementsByTagName("label")[6];
+        label7.innerHTML= label7.innerHTML +":  " + urlParams.get('termsAndConditions');
+
+        let label8 = document.getElementsByTagName("label")[7];
+        label8.innerHTML= label8.innerHTML +":  " + urlParams.get('newsletter');
            
          function edit(){
-             window.location.href= 
-             "submitForm.html" + window.location.search;
+             window.location.href= "registrationForm.html" + window.location.search;
+
          }  
+         function save(){
+             alert("Thank you");
+         }
            </script>
 </body>
 </html>
